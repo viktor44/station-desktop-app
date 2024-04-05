@@ -13,5 +13,6 @@
   ],
   "theme_color": "#4267b2",
   "scope": "https://www.facebook.com",
+  "bx_disable_node_integration": true,
   "recommendedPosition": "13"
 }

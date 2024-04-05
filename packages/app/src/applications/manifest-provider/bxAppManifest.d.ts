@@ -18,6 +18,7 @@ export interface BxAppManifest {
   bx_override_user_agent?: string;
   bx_keep_always_loaded?: boolean;
   bx_not_use_native_window_open_on_host?: boolean;
+  bx_disable_node_integration?: boolean;
   bx_no_dock?: boolean;
   bx_use_default_session?: boolean;
   bx_single_page?: boolean;

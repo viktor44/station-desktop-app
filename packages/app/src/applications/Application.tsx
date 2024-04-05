@@ -52,6 +52,7 @@ import { withGetApplicationState } from './queries@local.gql.generated';
 import { getApplicationDescription } from './selectors';
 import { ApplicationImmutable } from './types';
 import { getForeFrontNavigationStateProperty } from './utils';
+import ConsoleErrorBoundary from '../common/containers/ConsoleErrorBoundary';
 
 type WebviewMethod = (webview: ElectronWebview) => void;
 type WebviewMethods = {
@@ -102,6 +103,7 @@ export interface OwnProps {
   applicationIcon: Maybe<string>,
   themeColor: Maybe<string>,
   notUseNativeWindowOpen: Maybe<boolean>,
+  disableNodeIntegration: Maybe<boolean>,
   useDefaultSession: Maybe<boolean>,
 
   appFocus: Maybe<number>,
@@ -400,7 +402,7 @@ class ApplicationImpl extends React.PureComponent {
     const tab = this.props.tab;
     const useNativeWindowOpen = !this.props.notUseNativeWindowOpen;
     const tabUrl = tab.get('url', '');
-    const nodeIntegrationEnabled = tabUrl.startsWith('station://')
+    const nodeIntegrationEnabled = !this.props.disableNodeIntegration;
 
     const {
       applicationId, applicationName, applicationIcon, themeColor, manifestURL,
@@ -493,6 +495,7 @@ const Application = compose(
         themeColor: manifestData.theme_color(),
         notUseNativeWindowOpen: manifestData.bx_not_use_native_window_open_on_host(),
         useDefaultSession: manifestData.bx_use_default_session(),
+        disableNodeIntegration: manifestData.bx_disable_node_integration(),
 
         isOnline: stationStatus.isOnline(),
         appFocus: stationStatus.focus(),

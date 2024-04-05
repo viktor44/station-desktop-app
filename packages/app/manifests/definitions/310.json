@@ -11,6 +11,7 @@
   "theme_color": "#09F",
   "scope": "https://www.messenger.com",
   "bx_keep_always_loaded": true,
+  "bx_disable_node_integration": true,
   "bx_legacy_service_id": "facebook-messenger",
   "recommendedPosition": "6"
 }

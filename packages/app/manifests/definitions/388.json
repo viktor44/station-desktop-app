@@ -14,5 +14,6 @@
   "theme_color": "#E43966",
   "scope": "https://www.instagram.com",
   "bx_legacy_service_id": "instagram",
+  "bx_disable_node_integration": true,
   "recommendedPosition": "11"
 }

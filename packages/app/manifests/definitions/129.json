@@ -11,6 +11,7 @@
   "theme_color": "#EB5757",
   "scope": "https://www.notion.so",
   "bx_legacy_service_id": "notion",
+  "bx_disable_node_integration": true,
   "extended_scopes": [
     "https://notion.so"
   ],

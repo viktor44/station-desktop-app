@@ -284,6 +284,8 @@ type ManifestData {
  bx_not_use_native_window_open_on_host: Boolean,
  """true - use default shared session. false or unset - isolated session for each app instance"""
  bx_use_default_session: Boolean,
+ """true - disable nodeIntegration flag for webview"""
+ bx_disable_node_integration: Boolean, 
  """Application Chrome Extension ID"""
  cxExtensionId: ID,
 }

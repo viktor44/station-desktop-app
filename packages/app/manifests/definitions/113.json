@@ -10,5 +10,6 @@
   ],
   "theme_color": "#3C5A9A",
   "scope": "https://business.facebook.com",
+  "bx_disable_node_integration": true,
   "bx_legacy_service_id": "facebook-bm"
 }
