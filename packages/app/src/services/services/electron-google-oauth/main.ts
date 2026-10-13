@@ -1,5 +1,4 @@
-import { google } from 'googleapis';
-import { people_v1 } from 'googleapis/build/src/apis/people/v1';
+import { people, people_v1 } from '@googleapis/people';
 import { Credentials } from 'google-auth-library';
 import ElectronGoogleOAuth2 from '@getstation/electron-google-oauth2';
 import log from 'electron-log';
@@ -17,7 +16,7 @@ export class ElectronGoogleOAuthServiceImpl extends ElectronGoogleOAuthService i
     return client.openAuthWindowAndGetTokens(forceAddSession)
       .then(async (tokens) => {
         try {
-          const service = google.people({
+          const service = people({
             version: 'v1',
             auth: client.oauth2Client,
           });

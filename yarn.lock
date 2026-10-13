@@ -2943,6 +2943,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@googleapis/drive@npm:8.2.0":
+  version: 8.2.0
+  resolution: "@googleapis/drive@npm:8.2.0"
+  dependencies:
+    googleapis-common: "npm:^6.0.3"
+  checksum: 10c0/d57b477353b0eecbb692e2c70eeb91bd80f1c7d2a59ee582402d074515bf78c2bb733c06086f4bff9e5c824c7e6e6da8d54db1b3527ad00d605ad41d40cf4686
+  languageName: node
+  linkType: hard
+
+"@googleapis/oauth2@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@googleapis/oauth2@npm:1.0.3"
+  dependencies:
+    googleapis-common: "npm:^6.0.3"
+  checksum: 10c0/3c35e82ff79766f675fb39e7929c988b56162c823e6fdda5e954d2ff65e051b4ee2173f23cb51568210065f130d1e5121fa22803953ff2b06cf2492c30ccb0ed
+  languageName: node
+  linkType: hard
+
+"@googleapis/people@npm:3.0.5":
+  version: 3.0.5
+  resolution: "@googleapis/people@npm:3.0.5"
+  dependencies:
+    googleapis-common: "npm:^6.0.3"
+  checksum: 10c0/cc5581eeac5a503f5ed07b57a1237ed6c1e04ec2386d74591282176110cb9e6ffb457795fa111ed7263667fdb01291bd0794b149ac2e153049a73b07933871d0
+  languageName: node
+  linkType: hard
+
 "@graphql-codegen/add@npm:1.8.3":
   version: 1.8.3
   resolution: "@graphql-codegen/add@npm:1.8.3"
@@ -6247,13 +6274,6 @@ __metadata:
   dependencies:
     "@types/ms": "npm:*"
   checksum: 10c0/e5e124021bbdb23a82727eee0a726ae0fc8a3ae1f57253cbcc47497f259afb357de7f6941375e773e1abbfa1604c1555b901a409d762ec2bb4c1612131d4afb7
-  languageName: node
-  linkType: hard
-
-"@types/emoji-js@npm:^3.4.0":
-  version: 3.5.2
-  resolution: "@types/emoji-js@npm:3.5.2"
-  checksum: 10c0/b91589f2d770697f276e11de93cf4100e55d42cdf1d6c0454d0b1dc997464496b7d30445c028fd1fd2e79a091a728db994de50f3169212b2478bb37e46042048
   languageName: node
   linkType: hard
 
@@ -9692,7 +9712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:^1.0.2, base64-js@npm:^1.3.0, base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
+"base64-js@npm:^1.0.2, base64-js@npm:^1.3.0, base64-js@npm:^1.5.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
   checksum: 10c0/f23823513b63173a001030fae4f2dabe283b99a9d324ade3ad3d148e218134676f1ee8568c877cd79ec1c53158dcf2d2ba527a97c606618928ba99dd930102bf
@@ -9796,17 +9816,6 @@ __metadata:
   dependencies:
     file-uri-to-path: "npm:1.0.0"
   checksum: 10c0/3dab2491b4bb24124252a91e656803eac24292473e56554e35bbfe3cc1875332cfa77600c3bac7564049dc95075bf6fcc63a4609920ff2d64d0fe405fcf0d4ba
-  languageName: node
-  linkType: hard
-
-"bl@npm:^4.0.3":
-  version: 4.1.0
-  resolution: "bl@npm:4.1.0"
-  dependencies:
-    buffer: "npm:^5.5.0"
-    inherits: "npm:^2.0.4"
-    readable-stream: "npm:^3.4.0"
-  checksum: 10c0/02847e1d2cb089c9dc6958add42e3cdeaf07d13f575973963335ac0fdece563a50ac770ac4c8fa06492d2dd276f6cc3b7f08c7cd9c7a7ad0f8d388b2a28def5f
   languageName: node
   linkType: hard
 
@@ -10169,16 +10178,6 @@ __metadata:
     ieee754: "npm:^1.1.4"
     isarray: "npm:^1.0.0"
   checksum: 10c0/dc443d7e7caab23816b58aacdde710b72f525ad6eecd7d738fcaa29f6d6c12e8d9c13fed7219fd502be51ecf0615f5c077d4bdc6f9308dde2e53f8e5393c5b21
-  languageName: node
-  linkType: hard
-
-"buffer@npm:^5.5.0":
-  version: 5.7.1
-  resolution: "buffer@npm:5.7.1"
-  dependencies:
-    base64-js: "npm:^1.3.1"
-    ieee754: "npm:^1.1.13"
-  checksum: 10c0/27cac81cff434ed2876058d72e7c4789d11ff1120ef32c9de48f59eab58179b66710c488987d295ae89a228f835fc66d088652dffeb8e3ba8659f80eb091d55e
   languageName: node
   linkType: hard
 
@@ -14454,23 +14453,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emoji-datasource@npm:16.0.0":
-  version: 16.0.0
-  resolution: "emoji-datasource@npm:16.0.0"
-  checksum: 10c0/a34c7ce3a163eaa26f2c2f067b09b81bc210b2fd72673cd2ba8913f251abadfaab8d2d027528b9bc7f83f551a484a4522c28e5f08560df040481d7cc4bca29aa
-  languageName: node
-  linkType: hard
-
-"emoji-js@npm:^3.4.1":
-  version: 3.9.0
-  resolution: "emoji-js@npm:3.9.0"
-  dependencies:
-    emoji-datasource: "npm:16.0.0"
-    tar-fs: "npm:^2.1.4"
-  checksum: 10c0/5c4ed9d12f1f6d4eddfd697c2750d44a49e402a4279312af983526c426e16c4018674e5ef98d343af67ab19aeb973ce8915d66c03355263dc9c5e7855b3a7175
-  languageName: node
-  linkType: hard
-
 "emoji-regex@npm:^7.0.1":
   version: 7.0.3
   resolution: "emoji-regex@npm:7.0.3"
@@ -16376,13 +16358,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-constants@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "fs-constants@npm:1.0.0"
-  checksum: 10c0/a0cde99085f0872f4d244e83e03a46aa387b74f5a5af750896c6b05e9077fac00e9932fdf5aef84f2f16634cd473c63037d7a512576da7d5c2b9163d1909f3a8
-  languageName: node
-  linkType: hard
-
 "fs-extra@npm:11.3.1":
   version: 11.3.1
   resolution: "fs-extra@npm:11.3.1"
@@ -17135,7 +17110,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"googleapis-common@npm:^6.0.0":
+"googleapis-common@npm:^6.0.3":
   version: 6.0.4
   resolution: "googleapis-common@npm:6.0.4"
   dependencies:
@@ -17146,16 +17121,6 @@ __metadata:
     url-template: "npm:^2.0.8"
     uuid: "npm:^9.0.0"
   checksum: 10c0/7db7b6010d0ea00c01c74cb4ed1a7f8df7d6477a13b49a9bcf799cade322eb3e3a89655651f20cb5208f6d7d68b5a96f44befa35578bc290c732f7547fa31795
-  languageName: node
-  linkType: hard
-
-"googleapis@npm:^118.0.0":
-  version: 118.0.0
-  resolution: "googleapis@npm:118.0.0"
-  dependencies:
-    google-auth-library: "npm:^8.0.2"
-    googleapis-common: "npm:^6.0.0"
-  checksum: 10c0/a41635fcb760e7111e70fabb1b962ced0dbc89f4e8d56058ddd56be4ee2b2c458bbe0e217013e987e37fb2e951805bcfebeb1cb9b9445bc317fb5535ff6b93e7
   languageName: node
   linkType: hard
 
@@ -18268,7 +18233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.1.13, ieee754@npm:^1.1.4":
+"ieee754@npm:^1.1.4":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 10c0/b0782ef5e0935b9f12883a2e2aa37baa75da6e66ce6515c168697b42160807d9330de9a32ec1ed73149aea02e0d822e572bca6f1e22bdcbd2149e13b050b17bb
@@ -23185,13 +23150,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp-classic@npm:^0.5.2":
-  version: 0.5.3
-  resolution: "mkdirp-classic@npm:0.5.3"
-  checksum: 10c0/95371d831d196960ddc3833cc6907e6b8f67ac5501a6582f47dfae5eb0f092e9f8ce88e0d83afcae95d6e2b61a01741ba03714eeafb6f7a6e9dcc158ac85b168
-  languageName: node
-  linkType: hard
-
 "mkdirp@npm:0.5.1":
   version: 0.5.1
   resolution: "mkdirp@npm:0.5.1"
@@ -26882,7 +26840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.4.0, readable-stream@npm:^3.6.0":
+"readable-stream@npm:^3.0.6, readable-stream@npm:^3.1.1, readable-stream@npm:^3.6.0":
   version: 3.6.2
   resolution: "readable-stream@npm:3.6.2"
   dependencies:
@@ -29404,6 +29362,9 @@ __metadata:
     "@getstation/sdk": "workspace:*"
     "@getstation/slack": "npm:^13.0.0"
     "@getstation/theme": "npm:^1.2.0"
+    "@googleapis/drive": "npm:8.2.0"
+    "@googleapis/oauth2": "npm:1.0.3"
+    "@googleapis/people": "npm:3.0.5"
     "@graphql-codegen/cli": "npm:1.3.1"
     "@graphql-codegen/typescript": "npm:1.3.1"
     "@graphql-codegen/typescript-document-nodes": "npm:^1.8.3"
@@ -29429,7 +29390,6 @@ __metadata:
     "@types/async-lock": "npm:^0.0.21"
     "@types/bluebird": "npm:^3.5.26"
     "@types/content-disposition": "npm:^0.5.2"
-    "@types/emoji-js": "npm:^3.4.0"
     "@types/end-of-stream": "npm:^1.4.0"
     "@types/fs-extra": "npm:^9.0.13"
     "@types/global-tunnel-ng": "npm:^2.1.0"
@@ -29459,7 +29419,6 @@ __metadata:
     "@types/ramda": "npm:^0.26.8"
     "@types/react": "npm:^16.14.40"
     "@types/react-dom": "npm:^16.9.18"
-    "@types/react-lottie": "npm:^1.2.3"
     "@types/react-redux": "npm:^7.1.25"
     "@types/react-transition-group": "npm:^4.2.2"
     "@types/recompose": "npm:^0.30.7"
@@ -29522,7 +29481,6 @@ __metadata:
     electron-updater: "npm:^6.2.1"
     electron-webpack: "npm:^2.8.2"
     electron-window-state: "npm:5.0.3"
-    emoji-js: "npm:^3.4.1"
     end-of-stream: "npm:^1.4.1"
     enum-values: "npm:^1.2.0"
     eslint: "npm:^4.18.2"
@@ -29544,7 +29502,6 @@ __metadata:
     glob: "npm:^7.1.4"
     global-tunnel-ng: "npm:^2.7.1"
     google-auth-library: "npm:^8.7.0"
-    googleapis: "npm:^118.0.0"
     graphql: "npm:^14.0.2"
     graphql-codegen-typescript-reactive-resolvers: "npm:2.0.0"
     graphql-import: "npm:^0.7.1"
@@ -29618,7 +29575,6 @@ __metadata:
     react-immutable-proptypes: "npm:^2.1.0"
     react-jss: "npm:^8.4.0"
     react-key-handler: "npm:^1.0.1"
-    react-lottie: "npm:^1.2.3"
     react-merge-refs: "npm:^1.0.0"
     react-popper: "npm:^1.3.4"
     react-redux: "npm:^5.1.2"
@@ -30403,31 +30359,6 @@ __metadata:
   version: 1.1.3
   resolution: "tapable@npm:1.1.3"
   checksum: 10c0/c9f0265e55e45821ec672b9b9ee8a35d95bf3ea6b352199f8606a2799018e89cfe4433c554d424b31fc67c4be26b05d4f36dc3c607def416fdb2514cd63dba50
-  languageName: node
-  linkType: hard
-
-"tar-fs@npm:^2.1.4":
-  version: 2.1.5
-  resolution: "tar-fs@npm:2.1.5"
-  dependencies:
-    chownr: "npm:^1.1.1"
-    mkdirp-classic: "npm:^0.5.2"
-    pump: "npm:^3.0.0"
-    tar-stream: "npm:^2.1.4"
-  checksum: 10c0/b987429214c3ab3be1f439b4e097dc310acf449c35f355956d801f59ef4cfde3b9827797ab2d2f087ed024e459eedc9b3cd860c9190b86e356ba348ade928684
-  languageName: node
-  linkType: hard
-
-"tar-stream@npm:^2.1.4":
-  version: 2.2.0
-  resolution: "tar-stream@npm:2.2.0"
-  dependencies:
-    bl: "npm:^4.0.3"
-    end-of-stream: "npm:^1.4.1"
-    fs-constants: "npm:^1.0.0"
-    inherits: "npm:^2.0.3"
-    readable-stream: "npm:^3.1.1"
-  checksum: 10c0/2f4c910b3ee7196502e1ff015a7ba321ec6ea837667220d7bcb8d0852d51cb04b87f7ae471008a6fb8f5b1a1b5078f62f3a82d30c706f20ada1238ac797e7692
   languageName: node
   linkType: hard
 

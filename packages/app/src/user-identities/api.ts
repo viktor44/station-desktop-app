@@ -1,4 +1,4 @@
-import { people_v1 } from 'googleapis/build/src/apis/people/v1';
+import { people_v1 } from '@googleapis/people';
 import { Credentials } from 'google-auth-library/build/src/auth/credentials';
 import { Omit } from '../types';
 import services from '../services/servicesManager';

@@ -1,14 +1,17 @@
 import ElectronGoogleOAuth2 from '@getstation/electron-google-oauth2';
 import { SDK, search, tabs } from '@getstation/sdk';
-import { AxiosPromise } from 'axios';
-import { google } from 'googleapis';
-import { Schema$File, Schema$FileList } from 'googleapis/build/src/apis/drive/v3';
-import { Schema$Userinfoplus } from 'googleapis/build/src/apis/oauth2/v2';
+import { drive as driveApi, drive_v3 } from '@googleapis/drive';
+import { oauth2 as oauth2Api, oauth2_v2 } from '@googleapis/oauth2';
 import memoizee = require('memoizee');
 
 import { idExtractor } from './activity';
 
-const drive = google.drive('v3');
+type Schema$File = drive_v3.Schema$File;
+type Schema$FileList = drive_v3.Schema$FileList;
+// `Schema$Userinfoplus` in the old monolithic `googleapis` package
+type Schema$Userinfoplus = oauth2_v2.Schema$Userinfo;
+
+const drive = driveApi('v3');
 const isBlankRegex = /^\s*$/;
 
 export class ElectronGDriveOAuth2 extends ElectronGoogleOAuth2 {
@@ -42,24 +45,15 @@ export class ElectronGDriveOAuth2 extends ElectronGoogleOAuth2 {
   }
 
   async getUserInfos(): Promise<Schema$Userinfoplus> {
-    return new Promise((resolve, reject) =>
-      google.oauth2({
-        auth: this.oauth2Client,
-        version: 'v2',
-      })
-        .userinfo.get(async (
-          error: Error,
-          response: AxiosPromise<Schema$Userinfoplus>
-        ) => {
-          if (error) {
-            return reject(error);
-          }
+    // The callback overload this used to pass was typed against `AxiosPromise`,
+    // which never matched the library's `BodyResponseCallback`; the promise
+    // overload issues the same request and rejects on the same errors.
+    const response = await oauth2Api({
+      auth: this.oauth2Client,
+      version: 'v2',
+    }).userinfo.get();
 
-          const { data } = await response;
-
-          return resolve(data);
-        })
-    );
+    return response.data;
   }
 
   async getFile(fileId: string): Promise<Schema$File & { email: string }> {
@@ -71,7 +65,7 @@ export class ElectronGDriveOAuth2 extends ElectronGoogleOAuth2 {
 
     const { email } = await this.getUserInfos();
 
-    return { ...file.data as Schema$File, email };
+    return { ...file.data as Schema$File, email: email! };
   }
 }
 
@@ -84,15 +78,19 @@ export function getGDriveFileAsSearchResult(sdk: SDK, item: Schema$File, account
     async () => await sdk.tabs.navToTab(matchingTab.tabId) :
     undefined;
 
+  // Every field asserted below is in the `fields` projection of the Drive
+  // requests above, so the API always populates it. The old import of these
+  // schemas resolved to `any`, which is why the assertions were not needed
+  // before.
   return {
-    resourceId: item.id,
+    resourceId: item.id!,
     category: !accountLabel ? 'Google Drive' : `Google Drive - ${accountLabel}`,
-    label: item.name,
+    label: item.name!,
     context: accountLabel,
-    imgUrl: item.iconLink,
+    imgUrl: item.iconLink!,
     manifestURL: sdk.search.id,
     onSelect,
-    url: item.webViewLink,
+    url: item.webViewLink!,
   };
 }
 

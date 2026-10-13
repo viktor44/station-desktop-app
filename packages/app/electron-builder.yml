@@ -75,6 +75,20 @@ files:
   # the asar. The runtime `require('electron')` always resolves to the built-in
   # module, never to this one.
   - '!**/node_modules/electron/**'
+  # The exclusion above does not cover `electron`'s own dependency tree.
+  # `@electron-internal/extract-zip` only unzips the Electron dist at install
+  # time, and ships a prebuilt .node for 5 platforms (7.0 MB).
+  - '!**/node_modules/@electron-internal{,/**/*}'
+  # build-time toolchain, reached through @mapbox/node-pre-gyp (3.3 MB)
+  - '!**/node_modules/node-gyp{,/**/*}'
+  # sqlite amalgamation tarball, only needed to compile from source (3.0 MB)
+  - '!**/node_modules/sqlite3/deps{,/**/*}'
+  # published docs / storybook builds, almost all @getstation/theme (9.0 MB)
+  - '!**/node_modules/*/{docs,storybook-static}{,/**/*}'
+  - '!**/node_modules/@*/*/{docs,storybook-static}{,/**/*}'
+  # MSVC link leftovers beside the .node (0.8 MB).
+  # .pdb / .obj / .o are already excluded by electron-builder's defaults.
+  - '!**/node_modules/*/build/Release/*.{lib,exp,iobj,ipdb}'
   - from: 'src/static/icon--provider'
     to: 'static/icon--provider'
     filter:

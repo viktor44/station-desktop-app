@@ -1,4 +1,4 @@
-import { people_v1 } from 'googleapis/build/src/apis/people/v1';
+import { people_v1 } from '@googleapis/people';
 import { ServiceBase } from '../../lib/class';
 import { service, timeout } from '../../lib/decorator';
 import { RPC } from '../../lib/types';
